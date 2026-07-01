@@ -1,0 +1,15 @@
+model Auth {
+  id            String        @id @default(uuid())
+  fullName      String
+  email         String        @unique
+  passwordHash  String
+  role          UserRole
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  applications  Application[]
+  profile  Profile[]
+  content_feeds ContentFeed[]
+  jobs          Jobs[]
+  
+  @@map("users")
+}

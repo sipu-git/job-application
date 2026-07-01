@@ -1,0 +1,14 @@
+model ContentFeed {
+  id          String          @id @default(uuid())
+  authorId    String
+  type        ContentType
+  title       String
+  content     String
+  mediaUrl    String?
+  isPublished Boolean         @default(false)
+  createdAt   DateTime        @default(now())
+  author      Auth            @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@index([authorId])
+  @@map("content_feeds")
+}

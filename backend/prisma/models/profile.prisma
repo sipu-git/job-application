@@ -1,0 +1,19 @@
+model Profile {
+    id             String   @id @default(uuid())
+    userId         String
+    fullName       String
+    phoneNumber    String
+    profilePic     String?
+    resume         String?
+    address        String
+    skills         Json?
+    experience     Json?
+    education      Json?
+    certifications Json?
+    languages      Json?
+    fileUrl        String
+    createdAt      DateTime @default(now())
+    updatedAt      DateTime @updatedAt
+
+    user Auth @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

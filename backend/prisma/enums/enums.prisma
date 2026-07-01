@@ -1,0 +1,42 @@
+enum ApplicationStatus {
+    APPLIED
+    UNDER_REVIEW
+    SHORTLISTED
+    INTERVIEW
+    OFFERED
+    REJECTED
+    WITHDRAWN
+}
+
+enum UserRole {
+    ADMIN
+    RECRUITER
+    CANDIDATE
+}
+
+enum ContentType {
+    ARTICLE
+    POST
+    ANNOUNCEMENT
+    JOB_UPDATE
+}
+
+enum EmploymentType {
+    FULL_TIME
+    PART_TIME
+    CONTRACT
+    INTERNSHIP
+    FREELANCE
+}
+
+enum JobStatus {
+    DRAFT
+    OPEN
+    CLOSED
+    ARCHIVED
+}
+
+enum ExperienceLevel {
+    FRESHER
+    EXPERIENCED
+}
